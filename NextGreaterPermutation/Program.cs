@@ -1,4 +1,5 @@
 ﻿using System;
+using NextGreaterPermutation;
 
 namespace NextGreaterPermutation;
 class Program
@@ -6,13 +7,14 @@ class Program
     static void Main(string[] args)
     {
         // Create a vector of integers
-        int[] nums = { 1, 5, 8, 4, 7, 6, 5, 3, 1 };
+        int[] nums = { 1, 2, 3};
 
         // Print the original vector
         Console.WriteLine("Original vector: " + string.Join(", ", nums));
 
         // Call the function that finds the next permutation
-        NextPermutation(nums);
+        var perm = new Permutation();
+        perm.NextPermutation(nums);
 
         // Print the next permutation
         Console.WriteLine("Next permutation: " + string.Join(", ", nums));
